@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# source .bashrc
+
 # --- Docker Shortcuts ---
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias dimg='docker images'
@@ -15,3 +19,4 @@ alias cls='clear'
 # --- PHP & Scripting ---
 alias phpserv='php -S localhost:8000'
 alias checksh='shellcheck *.sh'
+alias composer='php /path/to/composer.phar' # Update with actual path

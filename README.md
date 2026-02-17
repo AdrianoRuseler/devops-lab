@@ -1,33 +1,6 @@
-# Setup Test Page
+## Setup Test Page
 
 The Complete DevOps Lab Structure
-
-```txt
-devops-lab/
-├── .vscode/
-│   ├── extensions.json
-│   └── settings.json
-├── .env                <-- Your secrets
-├── .gitignore          <-- Your shield
-├── Dockerfile          <-- Your blueprint
-├── docker-compose.yml  <-- Your conductor
-├── test-script.sh      <-- Your logic
-└── README.md           <-- Your map
-```
-
-```txt
-devops-lab/
-├── .vscode/            <-- Config & Extensions
-├── .env                <-- Your Variables
-├── .gitignore          <-- Your Security
-├── Dockerfile          <-- Build Instructions
-├── docker-compose.yml  <-- Orchestration
-├── nginx.conf          <-- Nginx Server Config
-├── .htaccess           <-- Apache Server Config
-├── index.php           <-- Application Code
-├── test-script.sh      <-- Automation Logic
-└── README.md           <-- Project Map
-```
 
 ```txt
 devops-lab/
@@ -39,6 +12,7 @@ devops-lab/
 ├── .env                <-- Local secrets (Gitignored)
 ├── .env.example        <-- Template for others
 ├── .gitignore          <-- Your security guard
+├── .gitattributes      <-- Added to lock in LF
 ├── Dockerfile          <-- Multi-stage build
 ├── docker-compose.yml  <-- The Orchestrator
 ├── nginx.conf          <-- Server rules
@@ -64,3 +38,23 @@ graph TD;
 3.  **Terminal:** Press ``Ctrl + ` ``. It should open **Git Bash** (or your chosen shell) instead of the standard Windows Command Prompt.
 
 **Does the Mermaid diagram render correctly in your preview window, or do you see the raw code?**
+
+
+> [!NOTE]
+> This is a helpful note to keep users on track.
+
+> [!TIP]
+> Use the `dcrebuild` alias we created to save time!
+
+> [!IMPORTANT]
+> Don't forget to set your variables in the .env file.
+
+> [!WARNING]
+> Never commit your actual .env file to Git!
+
+> [!CAUTION]
+> Deleting the docker volume will wipe your local database.
+
+## Reference
+- https://gemini.google.com/share/7157aa4af76e
+  
