@@ -1,4 +1,3 @@
-## Setup Test Page
 
 # 🚀 DevOps Lab: PHP-Docker Environment
 
