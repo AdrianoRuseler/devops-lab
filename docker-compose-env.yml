@@ -1,0 +1,16 @@
+services:
+  app-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APP_VERSION=${APP_VERSION}
+    container_name: ${PROJECT_NAME}
+    # Load the .env file variables into the container
+    env_file:
+      - .env
+    # Mount your local folder into the container (Hot-Reloading for scripts)
+    volumes:
+      - .:/app
+    ports:
+      - "${DOCKER_PORT}:8080"

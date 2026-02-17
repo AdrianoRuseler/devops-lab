@@ -1,0 +1,37 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Lint Bash scripts
+        run: |
+          sudo apt-get install -y shellcheck
+          shellcheck test-script.sh
+
+      - name: Validate PHP syntax
+        run: php -l index.php
+
+      - name: Build Docker Image (Multi-stage)
+        run: |
+          docker build \
+            --target builder \
+            -t my-app:builder .
+          docker build \
+            -t my-app:latest .
+
+      - name: Verify Container Starts
+        run: |
+          docker compose up -d
+          sleep 5
+          docker ps | grep -q "Up"
