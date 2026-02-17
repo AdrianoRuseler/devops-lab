@@ -21,9 +21,6 @@ devops-lab/
 └── README.md           <-- Documentation
 ```
 
-!!! note "Verification"
-    If you see this in a blue or styled box, Admonitions are working.
-
 ### Architecture Flow
 ```mermaid
 graph TD;
@@ -36,9 +33,6 @@ graph TD;
 1.  **Icons:** Look at your file tree on the left. You should see a **Shell icon** for the `.sh` file, a **Whale icon** for the `Dockerfile`, and a **Markdown icon** for the `.md` file.
 2.  **Format on Save:** In the `Dockerfile`, put 5 spaces between `FROM` and `alpine`. Hit `Ctrl + S`. It should automatically shrink back to 1 space.
 3.  **Terminal:** Press ``Ctrl + ` ``. It should open **Git Bash** (or your chosen shell) instead of the standard Windows Command Prompt.
-
-**Does the Mermaid diagram render correctly in your preview window, or do you see the raw code?**
-
 
 > [!NOTE]
 > This is a helpful note to keep users on track.
